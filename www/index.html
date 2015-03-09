@@ -6,19 +6,11 @@
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
-    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
-    <link href="css/ionic.app.css" rel="stylesheet">
-    -->
-
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
-    
-    <script src="js/moment-with-locales.js"></script>
-
-    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">    
 </script>
 	
 	
@@ -60,23 +52,6 @@
 
 angular.module('Example', ['ionic'])
 
-.run( ['$http', '$rootScope', function($http, $rootScope) {
-	$rootScope.items =[
-		{ name: 'A1'  },
-		{ name: 'A2'  },
-		{ name: 'A3'  },
-		{ name: 'A4'  },
-		{ name: 'A5'  },
-		{ name: 'A6'  },
-		{ name: 'A7'  },
-		{ name: 'A8'  },
-		{ name: 'A9'  },
-		{ name: 'A10'  },
-		{ name: 'A11'  },				
-		{ name: 'A12'  }														
-	];   	
-}])
-
 .config(function($stateProvider, $urlRouterProvider) {
 
   $stateProvider
@@ -115,8 +90,23 @@ angular.module('Example', ['ionic'])
 })
 
 
-.controller("MyController", ['$scope','$rootScope', function($scope, $rootScope) {  
+.controller("MyController", ['$scope',function($scope) {  
+	$scope.items =[
+		{ name: 'A1'  },
+		{ name: 'A2'  },
+		{ name: 'A3'  },
+		{ name: 'A4'  },
+		{ name: 'A5'  },
+		{ name: 'A6'  },
+		{ name: 'A7'  },
+		{ name: 'A8'  },
+		{ name: 'A9'  },
+		{ name: 'A10'  },
+		{ name: 'A11'  },				
+		{ name: 'A12'  }														
+	];   	
 }])
+
 
 </script>
 	
